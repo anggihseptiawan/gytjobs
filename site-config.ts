@@ -1,7 +1,6 @@
 export default {
-  title: 'Nextwind',
-  description: 'Next.js + Typescript + Tailwindcss starter template',
-  url: 'https://nextwind.vercel.app',
+  title: 'Gytjobs',
+  description: 'Github jobs that developer should take a look',
   email: '',
   twitterUsername: ''
 }

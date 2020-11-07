@@ -1,6 +1,6 @@
 import { NextSeo } from 'next-seo'
 
-import Hero from '@/components/home/hero'
+import SearchForm from '@/components/home/SearchForm'
 import Layout from '@/components/Layout'
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <div className="app">
       <Layout>
         <NextSeo title="| Home" />
-        <Hero />
+        <SearchForm />
       </Layout>
     </div>
   )
