@@ -19,10 +19,12 @@ export default function Home({ getJobs }) {
       <Layout>
         <NextSeo title="| Home" />
         <SearchForm />
-        <div className="container mx-auto flex flex-wrap justify-center mt-6">
-          {jobs?.map(job => {
-            return <Card key={job.id} data={job} />
-          })}
+        <div className="container mx-auto mt-6">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2">
+            {jobs?.map(job => {
+              return <Card key={job.id} data={job} />
+            })}
+          </div>
         </div>
         <a
           href=""
@@ -37,7 +39,7 @@ export default function Home({ getJobs }) {
 
 export async function getServerSideProps() {
   try {
-    const jobs = await useFetch()
+    const jobs = await useFetch('frontend', 'germany')
     return {
       props: {
         getJobs: jobs
